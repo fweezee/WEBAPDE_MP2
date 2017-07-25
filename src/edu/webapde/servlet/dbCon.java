@@ -9,7 +9,7 @@ public class dbCon {
 	    {
 	        if (con != null) return con;
 	        // get db, user, pass from settings file
-	        return getConnection("webapde", "root", "");
+	        return getConnection("webapde", "root", "jgana1997");
 	    }
 
 	    private static Connection getConnection(String db_name,String user_name,String password)
@@ -26,7 +26,7 @@ public class dbCon {
 
 			System.out.println("Hello");
 
-	        return con;        
+	        return con;
 	    }
 
 }
