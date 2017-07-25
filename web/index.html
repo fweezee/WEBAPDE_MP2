@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		 <link rel="stylesheet" href="../../../Downloads/WEBAPDE%20MP/WebContent/css/homepage-style.css">
+		 <link href="../../../Downloads/WEBAPDE%20MP/WebContent/css/popupSignUp-style.css" rel="stylesheet">
+		 <script src="../../../Downloads/WEBAPDE%20MP/WebContent/JS/popupSignUp.js"></script>
+ 
+	<script src="../../../Downloads/WEBAPDE%20MP/WebContent/JS/jquery-3.2.1.min.js"></script>
+	
+	</head>
+	<body>
+
+		<div id="topBar">
+			<div class="login"> 
+					<form action ="login" method = "post">
+						<div class="unameFld"> Username: <input type = "text"  name = "uname" size = "15"/> </div>
+						<div class="pwordFld">Password: <input type = "password" name = "pword" size = "15"/> </div>			
+						<div class="checkbox"><input type="checkbox" value="YES" class="chk" name="remember"> Remember Me</div> 
+						<div><input class="lginBtn" type = "submit" value = "Log in" id="login"/> </div>
+					</form>
+			<button id="signUpBtn" onclick="div_show()">Sign Up</button> 
+			</div>
+		</div>
+	
+		
+		<div id = "mainPane">
+				<form action="publicFeed.jsp">
+					<div><input class="explrBtn" type="submit" value="Explore" /></div>
+				</form>
+				
+		
+		         <div id="signup">
+		            <!-- Popup Div Starts Here -->
+		            <div id="popupContact">
+		                <form  action="register" id="form" method="post">
+		                    <img id="close" src="../../../Downloads/WEBAPDE%20MP/WebContent/css/css-photos/xbtn.png" height="20" width="20" onclick ="div_hide()">
+		                   	<div class= "un">Username: *<input id="un" name="uname" placeholder="Username" type="text" size="15"/> </div>
+		                   	<div class= "pw">Password: *<input id="pw" name="pword" placeholder="Password" type="password" size = "15"></div>
+		                    <div class= "dsc">Description:<textarea id="desc" name="description" placeholder="A short description about yourself (Not longer than 100 words)"></textarea></div>
+		                    <input type = "submit" value = "Sign Up" id="submit" onclick="return check_empty()"/> 
+		                </form>
+		            </div>
+		            <!-- Popup Div Ends Here -->
+		        </div>
+		  
+		    
+       
+
+		</div>
+
+	
+		
+	</body>
+</html>

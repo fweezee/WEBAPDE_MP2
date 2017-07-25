@@ -1,0 +1,161 @@
+@CHARSET "ISO-8859-1";
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif;
+}
+
+.login{
+	position:fixed;
+	right:100px;
+	top:10px;
+
+}
+
+.unameFld{
+	position:fixed;
+	color:white;
+	top:16px;
+	right:33%;
+}
+
+.pwordFld{
+	position:fixed;
+	color:white;
+	top:16px;
+	right:16.8%;
+	
+}
+
+.checkbox{
+	position:fixed;
+	top:45px;
+	right:34%;
+	color:white;
+}
+
+
+.lginBtn {
+	position:fixed;
+	top:14px;
+	right:10.8%;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    padding: 2px 8px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.lginBtn:hover{
+  
+	color:grey;
+}
+
+#signUpBtn{
+	position:fixed;
+	top:14px;
+	right:3%;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    padding: 2px 8px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#signUpBtn:hover{
+  
+	color:grey;
+}
+.explrBtn{
+	position:fixed;
+    background-color: White;
+    border: 1px solid white;
+    border-radius:5px;
+    color: Black;
+    padding: 10px 25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+    top:70%;
+    left:45%;
+    opacity:0.5;
+}
+
+.explrBtn:hover{
+	transition: 1s ease;
+	color:grey;
+	opacity:1;
+}
+
+.signUpBtn{
+	position:fixed;
+    background-color: White;
+    border: 1px solid white;
+    border-radius:5px;
+    color: Black;
+    padding: 10px 25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+    top:60%;
+    left:47%;
+    opacity:0.80;
+}
+
+.signUpBtn:hover{
+	transition: 1s ease;
+	color:grey;
+	opacity:1;
+}
+/* Navigation Bar */
+#topBar{	
+	position:fixed;
+	height:70px;
+    width: 100%;
+    opacity:0.80;
+	background-color:black;
+    border-bottom: 1px solid #646262;
+}
+
+#topBar:hover{
+	transiton-delay: 1s;
+  	transition: 1s ease;
+	opacity:1;
+}
+#topBar div{
+	position:fixed;
+    display: block;
+    vertical-align: middle;
+    float: left;
+}
+
+#mainPane{
+	height:660px;
+    width: 100%;
+    background-repeat:no-repeat;
+    background-color:black;
+	background-image: url("css-photos/mainpage-bg.jpg");
+	background-size: 100% 100%;
+	
+}
+
+#publicFeed{
+	position:fixed;
+	top:10.6%;
+	overflow-y:auto;
+	height:90%;
+    width: 100%;
+    background-color:pink;
+}
+
+

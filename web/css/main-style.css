@@ -1,0 +1,51 @@
+@CHARSET "ISO-8859-1";
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif;
+}
+
+a{
+    font-family: "Open Sans", sans-serif;
+    color: black;
+    text-decoration: none;
+    border-bottom: 2px solid #3d3d3d;
+    border-bottom-width: 0;
+    transition: border-bottom-width ease 0.1s;
+}
+
+a:hover {
+    transiton-delay: 1s;
+    transition: 2s ease;
+    font-size:20;
+}
+
+
+/* Navigation Bar */
+#topBar{
+    width: 100%;
+    height: 5vh;
+    position: relative;
+    background-color: #000000;
+    border-bottom: 1px solid #646262;
+}
+
+#topBar div{
+    display: block;
+    vertical-align: middle;
+    float: left;
+}
+
+#body{
+    background-size: 100% auto contain;
+    background-attachment: fixed;
+    background-color: BLACK;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
