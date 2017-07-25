@@ -17,7 +17,7 @@ public class dbCon {
 	        try
 	        {
 	            Class.forName("com.mysql.jdbc.Driver");
-	            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/"+db_name+"?user="+user_name+"&password="+password);
+	            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/"+db_name+"?user="+ user_name+"&password="+password);
 	        }
 	        catch(Exception e)
 	        {

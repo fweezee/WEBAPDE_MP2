@@ -23,6 +23,7 @@
       <root url="jar://$PROJECT_DIR$/lib/stax-ex.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/streambuffer.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/woodstox-core-asl.jar!/" />
+      <root url="jar://C:/Program Files/Java/jre1.8.0_112/lib/ext/mysql-connector.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
