@@ -1,14 +1,15 @@
 package edu.webapde.servlet;
 
-import java.io.IOException;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+
 
 /**
  * Servlet implementation class RegisterServlet
@@ -40,21 +41,21 @@ public class RegisterServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		
-		String username = "\""+request.getParameter("uname")+"\"";;
-		String password = "\""+request.getParameter("pword")+"\"";;
-		String description = "\""+request.getParameter("description")+"\"";;
+		String username = "\""+request.getParameter("uname")+"\"";
+		String password = "\""+request.getParameter("pword")+"\"";
+		String description = "\""+request.getParameter("description")+"\"";
 		Boolean checker = true; //if this is false, there is an existing username already
 		int last_uNum=0;
 		
 		dbCon con = new dbCon();
 		try{
 			Statement stmt = con.getConnection().createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT userId from user");
+			ResultSet rs = stmt.executeQuery("SELECT userId FROM user");
 			while(rs.next()){
 				last_uNum=rs.getInt(1);
 			}
 			last_uNum++;
-			stmt.executeUpdate("INSERT INTO user VALUE("+last_uNum+", "+username+", "+password+", "+description+" )");
+			stmt.executeUpdate("INSERT INTO user VALUE("+last_uNum+", "+username+", "+password+", "+description+" , "+null+", "+ null+", "+null+", "+null+")");
 		}catch(Exception e){ System.out.println(e);}
 		response.sendRedirect("index.html");
 			

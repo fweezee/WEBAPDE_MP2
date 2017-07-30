@@ -1,7 +1,7 @@
 // Validating Empty Field
 function check_empty() {
 	if (document.getElementById('un').value == "" || document.getElementById('pw').value == "" ) {
-		alert("Please fill up all the required(*) info!");
+		alert("Please fill up all the required(*) asdf!");
 		return false;
 	}else if(document.getElementById('un').value != "" && document.getElementById('pw').value != "" ){	
 		alert("Account successfully created!");
@@ -16,3 +16,4 @@ function div_show() {
 function div_hide(){
 	document.getElementById('signup').style.display = "none";
 }
+

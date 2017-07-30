@@ -17,7 +17,7 @@
 						<div class="unameFld"> Username: <input type = "text"  name = "uname" size = "15"/> </div>
 						<div class="pwordFld">Password: <input type = "password" name = "pword" size = "15"/> </div>			
 						<div class="checkbox"><input type="checkbox" value="YES" class="chk" name="remember"> Remember Me</div> 
-						<div><input class="lginBtn" type = "submit" value = "Log in" id="login"/> </div>
+						<div><input class="lginBtn" name = "login" type = "submit" value = "Log in" id="login"/> </div>
 						<!--<button id="login_button" onclick="registerPage.html">asdf</button>-->
 					</form>
 			<button id="signUpBtn" onclick="div_show()">Sign Up</button> 
@@ -26,8 +26,8 @@
 	
 		
 		<div id = "mainPane">
-				<form action="publicFeed.jsp">
-					<div><input class="explrBtn" type="submit" value="Explore" /></div>
+				<form action="explore" method ="post">
+					<div><input class="explrBtn" name = "explore" type="submit" value="Explore" /></div>
 				</form>
 				
 		

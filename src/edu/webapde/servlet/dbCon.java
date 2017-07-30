@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 
 public class dbCon {
 	 static Connection con=null;
+
+
 	    public static Connection getConnection()
 	    {
 	        if (con != null) return con;
@@ -24,9 +26,10 @@ public class dbCon {
 	            e.printStackTrace();
 	        }
 
-			System.out.println("Hello");
 
 	        return con;
 	    }
+
+
 
 }
