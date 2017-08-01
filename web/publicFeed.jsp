@@ -49,7 +49,6 @@
             });
 		</script>
 
-
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
 
@@ -83,28 +82,67 @@
 		            <!-- Popup Div Ends Here -->
 		        </div>
 
+
+			<div id = "containerfeed">
 		        <div id="posts">
-		        	PUBLIC PHOTOS
+		        			<div class="tabbable">
+			<ul class="tabs">
+				<li><a href="#feed">Feed</a></li>
+			</ul>
+			<div class="tabcontent">
+				<div id="feed" class="tab">
+ 
+					<ul id="myUL">
+					<%try{ %>
+						<%for(int i = 0; i < (int)session.getAttribute("lengthpost"); i++){%>
+						<%if(session.getAttribute("type" + i).equals("public")){%>
+						<li>
+							<a href="#<%=session.getAttribute("pic" + i)%>">
+								<img src="<%=request.getContextPath()%>/photos/<%=session.getAttribute("location" + i)%>" width="300" height="200">
+							</a>
+							<div style="display: none;"><%=session.getAttribute("tags" + i)%>
+							</div>
+						</li>
+						<div id="<%=session.getAttribute("pic" + i)%>" class="modalDialog">
+							<a href="#close" title="Close" class="close">X</a>
+							<div class = "pageholder">
+
+								<div class="left">
+									<img class = "smolprofpic" src = "./css/css-photos/1437684956845.png">
+								</div>
+								<div class="right">
+									<%for(int j = 0; j < (int)session.getAttribute("lengthuser"); j++){%>
+									<%if(session.getAttribute("puserId" + i).equals(session.getAttribute("uId" + j))){%>
+									 <%=session.getAttribute("username" + j)%>
+									<%}}%>
+								</div>
+
+								<div style="clear:both;">
+									<h2><%=session.getAttribute("title" + i)%></h2>
+									<p><%=session.getAttribute("description" + i)%></p>
+									<img src = "<%=request.getContextPath()%>/photos/<%=session.getAttribute("location" + i)%>">
+									Tags: <input type="text" data-role="tagsinput" name = "tags" value = "<%=session.getAttribute("tags" + i)%>"/>
+								</div>
+
+							</div>
+						</div>
+						<%}%>
+						<%}%>
+				
+					</ul> 
+
+				</div>
+			</div>
+		</div>
+			<%}catch(Exception e){} %>
 		        </div>
+
+		        
 
 		</div>
 
 		<form action ="explore" method = "post" enctype="multipart/form-data">
-
-			<%=session.getAttribute("asdf")%>
-			<%--<%for(int i = 0; i < (int)session.getAttribute("length"); i++){%>--%>
-			<%--<%if(session.getAttribute("type" + i).equals("public") || Integer.parseInt((String) session.getAttribute("puserId" + i)) == Integer.parseInt((String) session.getAttribute("uId"))){%>--%>
-			<%--<a href="#<%=session.getAttribute("pic" + i)%>"><img src="<%=request.getContextPath()%>/photos/<%=session.getAttribute("location" + i)%>" width="300" height="200"></a>--%>
-			<%--<div id="<%=session.getAttribute("pic" + i)%>" class="modalDialog">--%>
-			<%--<div>--%>
-			<%--<a href="#close" title="Close" class="close">X</a>--%>
-			<%--<h2><%=session.getAttribute("title" + i)%></h2>--%>
-			<%--<img src = "<%=request.getContextPath()%>/photos/<%=session.getAttribute("location" + i)%>" width="300" height="200">--%>
-			<%--<p><%=session.getAttribute("description" + i)%></p>--%>
-			<%--</div>--%>
-			<%--</div>--%>
-			<%--<%}%>--%>
-			<%--<%}%>--%>
+			</div>
 		</form>
 
 

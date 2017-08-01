@@ -1,46 +1,46 @@
 @CHARSET "ISO-8859-1";
 
 *{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
 }
 
 .login{
-	position:fixed;
-	right:100px;
-	top:10px;
+    position:fixed;
+    right:100px;
+    top:10px;
 
 }
 
 .unameFld{
-	position:fixed;
-	color:white;
-	top:16px;
-	right:33%;
+    position:fixed;
+    color:white;
+    top:16px;
+    right:33%;
 }
 
 .pwordFld{
-	position:fixed;
-	color:white;
-	top:16px;
-	right:16.8%;
-	
+    position:fixed;
+    color:white;
+    top:16px;
+    right:16.8%;
+
 }
 
 .checkbox{
-	position:fixed;
-	top:45px;
-	right:34%;
-	color:white;
+    position:fixed;
+    top:45px;
+    right:34%;
+    color:white;
 }
 
 
 .lginBtn {
-	position:fixed;
-	top:14px;
-	right:10.8%;
+    position:fixed;
+    top:14px;
+    right:10.8%;
     background-color: black;
     border: 2px solid white;
     color: white;
@@ -52,14 +52,14 @@
 }
 
 .lginBtn:hover{
-  
-	color:grey;
+
+    color:grey;
 }
 
 #signUpBtn{
-	position:fixed;
-	top:14px;
-	right:3%;
+    position:fixed;
+    top:14px;
+    right:3%;
     background-color: black;
     border: 2px solid white;
     color: white;
@@ -71,11 +71,10 @@
 }
 
 #signUpBtn:hover{
-  
-	color:grey;
+    color:grey;
 }
 .explrBtn{
-	position:fixed;
+    position:fixed;
     background-color: White;
     border: 1px solid white;
     border-radius:5px;
@@ -91,13 +90,13 @@
 }
 
 .explrBtn:hover{
-	transition: 1s ease;
-	color:grey;
-	opacity:1;
+    transition: 1s ease;
+    color:grey;
+    opacity:1;
 }
 
 .signUpBtn{
-	position:fixed;
+    position:fixed;
     background-color: White;
     border: 1px solid white;
     border-radius:5px;
@@ -113,49 +112,48 @@
 }
 
 .signUpBtn:hover{
-	transition: 1s ease;
-	color:grey;
-	opacity:1;
+    transition: 1s ease;
+    color:grey;
+    opacity:1;
 }
 /* Navigation Bar */
-#topBar{	
-	position:fixed;
-	height:70px;
+#topBar{
+    position:fixed;
+    height:70px;
     width: 100%;
     opacity:0.80;
-	background-color:black;
+    background-color:black;
     border-bottom: 1px solid #646262;
 }
 
 #topBar:hover{
-	transiton-delay: 1s;
-  	transition: 1s ease;
-	opacity:1;
+    transiton-delay: 1s;
+    transition: 1s ease;
+    opacity:1;
 }
 #topBar div{
-	position:fixed;
+    position:fixed;
     display: block;
     vertical-align: middle;
     float: left;
 }
 
 #mainPane{
-	height:660px;
+    height:660px;
     width: 100%;
     background-repeat:no-repeat;
     background-color:black;
-	background-image: url("css-photos/mainpage-bg.jpg");
-	background-size: 100% 100%;
-	
+    background-image: url("css-photos/mainpage-bg.jpg");
+    background-size: 100% 100%;
+
 }
 
 #publicFeed{
-	position:fixed;
-	top:10.6%;
-	overflow-y:auto;
-	height:90%;
+    position:fixed;
+    top:10.6%;
+    overflow-y:auto;
+    height:90%;
     width: 100%;
-    background-color:pink;
 }
 
 

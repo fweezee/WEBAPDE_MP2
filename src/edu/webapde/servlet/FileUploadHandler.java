@@ -8,8 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Date;
 
 @WebServlet("/UploadServlet")
 public class FileUploadHandler extends HttpServlet {
@@ -93,9 +95,18 @@ public class FileUploadHandler extends HttpServlet {
 
 
         }catch(Exception e){ System.out.println(e);}
-        response.sendRedirect("userFeed.jsp");
+       // response.sendRedirect("userFeed.jsp");
+        response.sendRedirect("C:/Users/Jords/IdeaProjects/WEBAPDE_MP2/src/edu/webapde/servlet/LoginServlet.java");
+//        performTask(request, response);
 
+    }
 
+    private void performTask(HttpServletRequest request, HttpServletResponse response) throws ServletException,
+            IOException {
+        response.setContentType("text/html");
+        response.addHeader("Refresh", "5");
+        PrintWriter out = response.getWriter();
+        out.println("TestServlet says hi at " + new Date());
     }
 
 

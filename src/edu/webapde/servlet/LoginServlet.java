@@ -46,7 +46,6 @@ public class LoginServlet extends HttpServlet {
 		String imagePath = "C:/Users/Jords/Desktop/Anime/HOMEWORK/14590073_1265798113480645_4126802654257941886_o.jpg";
 		String userId = null;
 
-		System.out.println("Hello");
 
 		Boolean checker = false; //True if username and pword matches
 		String description = null;
@@ -54,6 +53,7 @@ public class LoginServlet extends HttpServlet {
 
 		request.getSession().setAttribute("db", con);
 
+		int ctr = 0;
 		try { 
 			Statement stmt=con.getConnection().createStatement();
 			ResultSet rs1=stmt.executeQuery("SELECT username, password, description, userId FROM user");
@@ -63,9 +63,15 @@ public class LoginServlet extends HttpServlet {
 						checker = true;
 						description = rs1.getString(3);
 						userId  = rs1.getString(4);
+
 				}
+//				request.getSession().setAttribute("uId"+ctr, rs1.getString(4));
+//				request.getSession().setAttribute("username"+ctr, rs1.getString(1));
+//				ctr++;
 			}
 		}catch(Exception e){ System.out.println(e);}
+
+//		request.getSession().setAttribute("lengthuser", ctr);
 
 			displayPosts(request, response, userId);
 
@@ -105,11 +111,22 @@ public class LoginServlet extends HttpServlet {
 
 		try {
 			Statement stmt=con.getConnection().createStatement();
-			ResultSet rs1=stmt.executeQuery("SELECT userId, title, description, location, id, type, tags FROM posts");
+//			ResultSet rs1=stmt.executeQuery("SELECT userId, title, description, location, id, type, tags FROM posts");
 
+			ResultSet rs1=stmt.executeQuery("SELECT username, password, description, userId FROM user");
 
 			//System.out.println(userId + " " + rs1.getString(1));
 
+			ctr = 0;
+			while(rs1.next()) {
+				request.getSession().setAttribute("uId" + ctr, rs1.getString(4));
+				request.getSession().setAttribute("username" + ctr, rs1.getString(1));
+				ctr++;
+			}
+			request.getSession().setAttribute("lengthuser", ctr);
+
+			ctr = 0;
+			rs1=stmt.executeQuery("SELECT userId, title, description, location, id, type, tags FROM posts");
 			while(rs1.next()){
 					request.getSession().setAttribute("puserId" + ctr, rs1.getString(1));
 					request.getSession().setAttribute("pic"+ctr,rs1.getString(5));
@@ -141,7 +158,6 @@ public class LoginServlet extends HttpServlet {
 		request.getSession().setAttribute("length", ctr);
 		request.getSession().setAttribute("sharelength", i);
 		request.getSession().setAttribute("taglength", j);
-		System.out.println(j);
 
 	}
 
